@@ -15,11 +15,11 @@ header, footer {
 }
 main {
   padding: 10px;
-  background-color: silver;
+  background-color: #99CC99;
 }
 
 .post {
-  background-color: white;
+  background-color: #CCFFCC;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
