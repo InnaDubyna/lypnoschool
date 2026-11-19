@@ -70,42 +70,52 @@
             <br><strong>Email: <a href="#">lypno_school@ukr.net</a></strong>
 
            
-<form id="contactForm" action="/send.php" method="post">
-  <div>
-    <label for="name">Ім'я (учня, батьків або вчителя):</label><br>
-    <input type="text" id="name" name="name" required>
+
+
+<div class="contact-container">
+
+  <div class="contact-form">
+    <form id="contactForm" action="/send.php" method="post">
+
+      <label for="name">Ім'я:</label><br>
+      <input type="text" id="name" name="name" required>
+      <br><br>
+
+      <label for="role">Хто звертається:</label><br>
+      <select id="role" name="role">
+        <option value="parent">Батьки</option>
+        <option value="student">Учень / учениця</option>
+        <option value="teacher">Вчитель / працівник</option>
+        <option value="other">Інше</option>
+      </select>
+      <br><br>
+
+      <label for="email">Електронна пошта:</label><br>
+      <input type="email" id="email" name="email" required>
+      <br><br>
+
+      <label for="message">Повідомлення:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <br><br>
+
+      <button type="submit">Надіслати</button>
+    </form>
+
+    <p id="successMessage" style="display:none; color:green;">
+      Дякуємо за звернення! Ми з вами зв'яжемося!
+    </p>
   </div>
-  <br>
 
-  <div>
-    <label for="role">Хто звертається:</label><br>
-    <select id="role" name="role">
-      <option value="parent">Батьки</option>
-      <option value="student">Учень / учениця</option>
-      <option value="teacher">Вчитель / працівник</option>
-      <option value="other">Інше</option>
-    </select>
+  <div class="contact-image">
+    <img src="bdu.jpg" alt="Зворотний зв'язок">
   </div>
-  <br>
 
-  <div>
-    <label for="email">Електронна пошта:</label><br>
-    <input type="email" id="email" name="email" required>
-  </div>
-  <br>
+</div>
 
-  <div>
-    <label for="message">Повідомлення або запитання:</label><br>
-    <textarea id="message" name="message" rows="5" cols="40" required></textarea>
-  </div>
-  <br>
 
-  <button type="submit">Надіслати</button>
-</form>
 
-<p id="successMessage" style="display:none; color:black; font-weight:bold;">
-  Дякуємо за звернення! Ми з вами зв'яжемося найближчим часом!
-</p>
+
+			  
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(event) {
