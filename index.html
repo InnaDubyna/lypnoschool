@@ -14,7 +14,31 @@
 <!-- blok header -->
 <header>  
 <nav class="top-menu">
-<a class="navbar-logo" href=""><img src="logo.png"></a>
+
+<style>
+  .hover-glow {
+    font-size: 50px;
+    font-weight: bold;
+    color: #5F5FDC;
+    cursor: pointer;
+    /* Початкова легка тінь */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Плавний перехід усіх змін за 0.4 секунди */
+    transition: all 0.4s ease;
+  }
+
+  .hover-glow:hover {
+    color: #ffffff;
+    /* Змінюємо тінь на яскраву золотисту підсвітку при наведенні */
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.7),
+      0 0 15px #ffae00,
+      0 0 30px #ff5500;
+  }
+</style>
+
+<div class="hover-glow">Липненський ліцей Любарської селищної ради</div>
+	
  <ul class="menu-main">
     <li><a href="index.html">Головна</a></li>
     <li><a href="teachers.html">Вчителі</a></li>
