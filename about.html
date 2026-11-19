@@ -28,28 +28,201 @@
 
 
 
-<!-- blok main -->
-<main>
-  <div>
-    
-    <!-- post 3 -->
-    <div class="post">
-      <img height="250" src="2-slider.jpg" alt="Card image cap">
-      <div>
-        <h3>Історія нашого ліцею</h3>
-       <p>
+<section class="history-section">
+
+  <div class="history-header">
+    <span class="history-label">НАША ГОРДІСТЬ • НАША ІСТОРІЯ</span>
+    <h1>Липненський ліцей</h1>
+    <p>Минуле, яким пишаємося. Сьогодення, яке творимо. Майбутнє, у яке віримо!</p>
+  </div>
+
+  <div class="history-intro">
+    <h2>🏫 Історія, що об'єднує покоління</h2>
+    <p>
+      За кожною школою стоять роки наполегливої праці,
+      сотні дитячих мрій, мудрі наставники та незабутні
+      моменти. Історія нашого ліцею — це історія людей,
+      які навчали, навчалися, творили й залишали свій слід.
+    </p>
+  </div>
+
+  <div class="history-video">
+    <h2>🎬 Зазирнімо в минуле</h2>
+    <p>Кожен кадр — це частинка нашої спільної історії.</p>
+
+    <!-- ВСТАВ СЮДИ ПОСИЛАННЯ НА ВІДЕО -->
+    <video controls poster="history-cover.jpg">
+ 
+      <source src="history.mp4" type="video/mp4">
+      Ваш браузер не підтримує відео.
+    </video>
+  </div>
+
+  <div class="director-section">
+    <div class="director-photo">
+      <!-- ЗАМІНИ director.jpg НА НАЗВУ СВОГО ФОТО -->
+      <img src="director.jpg" alt="Лаврук Надія Миколаївна">
+    </div>
+
+    <div class="director-info">
+      <span class="director-label">ЛЮДИНА, ЯКА ОЧОЛЮЄ ЛІЦЕЙ</span>
+      <h2>Лаврук Надія Миколаївна</h2>
+      <h3>Директорка Липненського ліцею</h3>
+      <p>
+        Сьогодні історію нашого закладу продовжує
+        творити педагогічний колектив на чолі з
+        Лаврук Надією Миколаївною.
+      </p>
+      <p>
+        Спільна праця, відповідальність, відданість
+        освітній справі та турбота про майбутнє дітей —
+        важливі складові життя нашого ліцею.
+      </p>
+    </div>
+  </div>
+
+  <div class="history-footer">
+    <h2>❤️ Наша історія триває!</h2>
+    <p>
+      Ми бережемо традиції, цінуємо сьогодення
+      та впевнено крокуємо в майбутнє.
+    </p>
+    <span>ЛИПНЕНСЬКИЙ ЛІЦЕЙ</span>
+  </div>
+
+</section>
+
+<style>
+.history-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #25304a;
+  overflow: hidden;
+}
+
+.history-header {
+  text-align: center;
+  padding: 65px 20px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(135deg,#172554,#4338ca,#7c3aed);
+}
+
+.history-label, .director-label {
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #fcd34d;
+  font-weight: bold;
+}
+
+.history-header h1 {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.history-header p {
+  font-size: 18px;
+}
+
+.history-intro, .history-video {
+  text-align: center;
+  padding: 35px 20px;
+  line-height: 1.8;
+}
+
+.history-intro h2, .history-video h2 {
+  color: #4338ca;
+}
+
+.history-video {
+  background: #f1f5f9;
+  border-radius: 22px;
+}
+
+.history-video video {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 18px;
+  margin-top: 15px;
+  background: #111;
+}
+
+.director-section {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 45px 25px;
+  margin: 35px 0;
+  border-radius: 22px;
+  background: linear-gradient(135deg,#eef2ff,#faf5ff);
+}
+
+.director-photo {
+  flex: 0 0 260px;
+}
+
+.director-photo img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px #0002;
+}
+
+.director-info {
+  flex: 1;
+  line-height: 1.7;
+}
+
+.director-info h2 {
+  color: #312e81;
+  font-size: 29px;
+}
+
+.director-info h3 {
+  color: #7c3aed;
+}
+
+.history-footer {
+  text-align: center;
+  padding: 45px 20px;
+  color: white;
+  border-radius: 22px;
+  background: linear-gradient(135deg,#312e81,#7c3aed);
+}
+
+.history-footer span {
+  display: block;
+  margin-top: 20px;
+  color: #fcd34d;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+@media(max-width:700px) {
+  .director-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .director-photo {
+    flex: auto;
+    max-width: 260px;
+  }
+
+  .history-header h1 {
+    font-size: 30px;
+  }
+}
+</style>
+
+
+	
+
          
-          <video src="history.mp4" width="700" height="500" controls="controls"></video> 
+     
             
                       
-        </p>
-     
        
-      </div>
-    </div>
-    <!-- end post 3 -->
-  </div>
-</main>
 
 
 
