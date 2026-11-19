@@ -66,8 +66,40 @@
         <div class="footer-column">
           <h3>Як зв'язатися з нами?</h3>
           <p>
-            Якщо ви хочете нам написати, напишіть на електронну адресу школи
+            Якщо ви хочете нам написати, напишіть на електронну адресу школи або заповніть форму зворотнього зв'язку:
             <br><strong>Email: <a href="#">lypno_school@ukr.net</a></strong>
+
+            <form action="/send.php" method="post">
+  <div>
+    <label for="name">ПІБ (учня, батьків або вчителя):</label><br>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <br>
+  <div>
+    <label for="role">Хто звертається:</label><br>
+    <select id="role" name="role">
+      <option value="parent">Батьки</option>
+      <option value="student">Учень / учениця</option>
+      <option value="teacher">Вчитель / працівник</option>
+      <option value="other">Інше</option>
+    </select>
+  </div>
+  <br>
+  <div>
+    <label for="email">Електронна пошта:</label><br>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <br>
+  <div>
+    <label for="message">Повідомлення або запитання:</label><br>
+    <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+  </div>
+  <br>
+  <button type="submit">Надіслати</button>
+</form>
+
+
+			  
           </p>
         </div>
       </div>
