@@ -34,6 +34,223 @@
     
     <center>
 
+
+
+<section class="secret-letter">
+  <h2>💌 ТАЄМНИЙ КОНВЕРТ</h2>
+  <p>У нас для тебе є дещо особливе...</p>
+
+  <div class="envelope" id="envelope"
+       onclick="openLetter()">
+    <div class="letter" id="letter">
+      <span id="message">
+        Ти — частинка нашої великої шкільної родини! ❤️
+      </span>
+    </div>
+    <div class="envelope-back"></div>
+    <div class="envelope-flap"></div>
+    <div class="envelope-front"></div>
+    <div class="heart">❤️</div>
+  </div>
+
+  <button onclick="openLetter()" class="letter-btn">
+    💌 ВІДКРИТИ КОНВЕРТ
+  </button>
+
+  <p class="letter-hint" id="hint">
+    Натисни на конверт і відкрий свій сюрприз!
+  </p>
+
+  <button onclick="newMessage()" class="letter-again"
+          id="again" style="display:none">
+    ✨ ОТРИМАТИ ЩЕ ОДНЕ ПОСЛАННЯ
+  </button>
+</section>
+
+<style>
+.secret-letter {
+  text-align: center;
+  padding: 45px 15px;
+  margin: 30px auto;
+  max-width: 750px;
+  border-radius: 25px;
+  background: linear-gradient(135deg,#fff1f2,#ede9fe);
+  font-family: Arial,sans-serif;
+}
+
+.secret-letter h2 {
+  color: #7c3aed;
+  font-size: 28px;
+}
+
+.envelope {
+  position: relative;
+  width: 260px;
+  height: 175px;
+  margin: 65px auto 35px;
+  cursor: pointer;
+  perspective: 700px;
+}
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #e9a0b0;
+  border-radius: 8px;
+}
+
+.envelope-front {
+  position: absolute;
+  inset: 0;
+  background: #f6b8c5;
+  clip-path: polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);
+  border-radius: 8px;
+  z-index: 3;
+}
+
+.envelope-flap {
+  position: absolute;
+  inset: 0;
+  background: #d97996;
+  clip-path: polygon(0 0,100% 0,50% 58%);
+  transform-origin: top;
+  transition: transform .7s;
+  z-index: 4;
+}
+
+.heart {
+  position: absolute;
+  top: 75px;
+  left: 112px;
+  z-index: 5;
+  font-size: 35px;
+  transition: opacity .3s;
+}
+
+.letter {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 240px;
+  height: 145px;
+  background: white;
+  border-radius: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #7c3aed;
+  font-size: 17px;
+  font-weight: bold;
+  transition: transform .8s;
+  opacity: 0;
+}
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope.open .letter {
+  transform: translateY(-115px);
+  opacity: 1;
+  z-index: 6;
+}
+
+.envelope.open .heart {
+  opacity: 0;
+}
+
+.letter-btn,.letter-again {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #9333ea;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 8px;
+}
+
+.letter-btn:hover,.letter-again:hover {
+  background: #6b21a8;
+  transform: scale(1.04);
+}
+
+.letter-hint {
+  color: #6b21a8;
+  font-size: 15px;
+}
+</style>
+
+<script>
+const messages = [
+  "Ти — частинка нашої великої шкільної родини! ❤️",
+  "Нехай кожен день дарує привід для посмішки! 😊",
+  "Пам'ятай: великі мрії починаються з маленьких кроків! ⭐",
+  "Нехай у твоєму житті буде більше п'ятниць і менше контрольних! 😂",
+  "Ти здатний на більше, ніж думаєш! 💪",
+  "Нехай знання відкривають перед тобою всі двері! 🔑",
+  "Бажаємо натхнення, успіхів і здійснення мрій! 🌈",
+  "У нашому ліцеї кожен особливий! 💜",
+  "Нехай сьогодні станеться щось приємне! 🎁"
+];
+
+let lastMessage = -1;
+
+function openLetter() {
+  const envelope = document.getElementById("envelope");
+
+  if (envelope.classList.contains("open")) return;
+
+  showMessage();
+  envelope.classList.add("open");
+
+  document.getElementById("hint").textContent =
+    "✨ Це послання саме для тебе!";
+
+  document.getElementById("letter-btn");
+  document.getElementById("again").style.display = "inline-block";
+}
+
+function showMessage() {
+  let index;
+  do {
+    index = Math.floor(Math.random() * messages.length);
+  } while (index === lastMessage);
+
+  lastMessage = index;
+  document.getElementById("message").textContent = messages[index];
+}
+
+function newMessage() {
+  document.getElementById("envelope").classList.remove("open");
+  document.getElementById("hint").textContent =
+    "Готуємо для тебе новий сюрприз...";
+
+  setTimeout(() => {
+    showMessage();
+    document.getElementById("envelope").classList.add("open");
+    document.getElementById("hint").textContent =
+      "✨ Ось іще одне послання для тебе!";
+  }, 800);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+		
+
 		<div>
         <h3>Адміністрація нашого ліцею</h3>
         <img src="11111.jpg" >
