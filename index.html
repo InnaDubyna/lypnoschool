@@ -124,6 +124,115 @@
 </main>
 
 
+<section class="countdown">
+    <h2>🎉 До зимових канікул залишилося</h2>
+
+    <div class="timer">
+        <div>
+            <span id="days">00</span>
+            <p>Днів</p>
+        </div>
+
+        <div>
+            <span id="hours">00</span>
+            <p>Годин</p>
+        </div>
+
+        <div>
+            <span id="minutes">00</span>
+            <p>Хвилин</p>
+        </div>
+
+        <div>
+            <span id="seconds">00</span>
+            <p>Секунд</p>
+        </div>
+    </div>
+
+    <h3 id="finish"></h3>
+</section>
+
+<style>
+.countdown {
+    background: linear-gradient(135deg, #155a9c, #55b5e8);
+    color: white;
+    text-align: center;
+    padding: 40px 15px;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.countdown h2 {
+    margin-bottom: 25px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.timer div {
+    background: white;
+    color: #155a9c;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 85px;
+}
+
+.timer span {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.timer p {
+    margin-top: 5px;
+}
+
+#finish {
+    margin-top: 20px;
+}
+</style>
+
+<script>
+let holidayDate = new Date("2026-12-25T00:00:00").getTime();
+
+function updateTimer() {
+    let now = new Date().getTime();
+    let distance = holidayDate - now;
+
+    if (distance <= 0) {
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+        document.getElementById("finish").innerHTML =
+            "🎊 Канікули настали! Гарного відпочинку!";
+        return;
+    }
+
+    document.getElementById("days").innerHTML =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    document.getElementById("hours").innerHTML =
+        Math.floor((distance / (1000 * 60 * 60)) % 24);
+
+    document.getElementById("minutes").innerHTML =
+        Math.floor((distance / (1000 * 60)) % 60);
+
+    document.getElementById("seconds").innerHTML =
+        Math.floor((distance / 1000) % 60);
+}
+
+updateTimer();
+setInterval(updateTimer, 1000);
+</script>
+
+
+
+
+	
 
 <!-- blok footer -->
 <footer>
