@@ -78,6 +78,298 @@
 </div>
 </div>
 
+
+
+<div class="wins-container">
+  <button class="main-wins-btn" onclick="toggleWinsMenu()">
+    🏆 НАШІ ПЕРЕМОГИ
+    <span class="btn-arrow">▼</span>
+  </button>
+
+  <div class="wins-menu" id="winsMenu">
+    <button onclick="showWin('ukraine')">🌍 Всеукраїнський рівень</button>
+    <button onclick="showWin('regional')">🥇 Обласний рівень</button>
+    <button onclick="showWin('district')">🏅 Районний рівень</button>
+    <button onclick="showWin('olympiads')">🧠 Олімпіади</button>
+  </div>
+
+  <div class="wins-info" id="ukraine">
+    <h2>🌍 Всеукраїнський рівень</h2>
+    <ul>
+      <li>Всеукраїнський конкурс творчих робіт «Національно-патріотичне становлення молоді»</li>
+      <li>Міжнародний конкурс еколого-валеологічної спрямованості на тему «Шлях до мрії»</li>
+      <li>Всеукраїнський конкурс «Новорічна композиція»</li>
+      <li>Всеукраїнська краєзнавча конференція учнівської молоді «Спадщина Чорнобиля: минуле, сучасне, майбутнє»</li>
+      <li>Всеукраїнський конкурс «День зустрічі птахів»</li>
+    </ul>
+  </div>
+
+  <div class="wins-info" id="regional">
+    <h2>🥇 Обласний рівень</h2>
+    <ul>
+      <li>Конкурс-захист науково-дослідницьких робіт учнів-членів МАН України</li>
+      <li>XXV обласна виставка-конкурс «Космічні фантазії» (номінація «Література, журналістика»)</li>
+      <li>VII обласний фестиваль екологічного кіно «Кіно-Eco-Fest» (номінація «Документальний фільм»)</li>
+      <li>«Обрії душі»</li>
+      <li>Обласний конкурс «За нашу свободу»</li>
+      <li>Обласна виставка-конкурс «Паперовий світ»</li>
+      <li>Обласна виставка-конкурс «Знай і люби свій край»</li>
+      <li>35-та обласна виставка-конкурс юних фотоаматорів «Моя Україно!»</li>
+      <li>Обласний еколого-мистецький конкурс «Природа в українському слові»</li>
+      <li>Обласний конкурс зі всеукраїнською участю «Цілюща сила дикої природи», номінація «Міні-енциклопедія»</li>
+      <li>Змагання «Пліч-о-пліч. Шкільні ліги» з черлідингу</li>
+      <li>Обласний конкурс «Чорнобильська трагедія стосується кожного»</li>
+      <li>Обласний конкурс «Рідкісні рослини Європи»</li>
+      <li>Обласний конкурс «Природа у творчості Івана Франка»</li>
+      <li>Обласний конкурс етнолого-краєзнавчих експедицій «Чуття єдиної родини»</li>
+      <li>Всеукраїнський конкурс дослідницько-експериментальних робіт з природознавства «Юний дослідник»</li>
+    </ul>
+  </div>
+
+  <div class="wins-info" id="district">
+    <h2>🏅 Районний рівень — Любарська ОТГ</h2>
+    <ul>
+      <li>Виставка-конкурс «Великодні писанки»</li>
+      <li>ІІ етап XXVI Міжнародного конкурсу імені Петра Яцика</li>
+      <li>Обласний конкурс «Чарівний пензлик»</li>
+      <li>Конкурс дитячого малюнка «Охорона праці очима дітей – 2026»</li>
+      <li>Міжнародний мовно-літературний конкурс учнівської та студентської молоді імені Тараса Шевченка</li>
+    </ul>
+  </div>
+
+  <div class="wins-info" id="olympiads">
+    <h2>🧠 Перемоги в учнівських олімпіадах</h2>
+
+    <h3>Обласний рівень</h3>
+    <ul>
+      <li>Всеукраїнська учнівська олімпіада з біології</li>
+      <li>Всеукраїнська учнівська олімпіада з історії</li>
+    </ul>
+
+    <h3>Районний рівень — Любарська ОТГ</h3>
+    <ul>
+      <li>Всеукраїнська учнівська олімпіада з астрономії</li>
+      <li>Всеукраїнська учнівська олімпіада з української мови</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.wins-container {
+  max-width: 850px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.main-wins-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 42px;
+  border: 2px solid #f7d774;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #071d49, #164b83);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 193, 7, .5);
+  animation: goldGlow 2s infinite alternate;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.main-wins-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 28px rgba(255, 193, 7, .85);
+}
+
+.main-wins-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.4),
+    transparent
+  );
+  animation: shine 3s infinite;
+}
+
+.btn-arrow {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 15px;
+  transition: transform .3s;
+}
+
+.wins-menu {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 22px auto;
+  animation: fadeIn .4s ease;
+}
+
+.wins-menu button {
+  padding: 13px 20px;
+  border: 1px solid #e5bd51;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fffdf5, #f8e8b4);
+  color: #102b55;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+  transition: .25s;
+}
+
+.wins-menu button:hover {
+  background: #f4d36e;
+  transform: translateY(-3px);
+}
+
+.wins-info {
+  display: none;
+  margin: 20px auto;
+  padding: 25px 30px;
+  border: 1px solid #e3c66d;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fffdf7, #f4f7fc);
+  color: #172b4d;
+  text-align: left;
+  box-shadow: 0 5px 18px rgba(0,0,0,.1);
+  animation: fadeIn .4s ease;
+}
+
+.wins-info h2 {
+  margin-top: 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e6c45c;
+  color: #123b70;
+  text-align: center;
+}
+
+.wins-info h3 {
+  margin-top: 24px;
+  color: #174b7e;
+}
+
+.wins-info ul {
+  padding-left: 24px;
+  line-height: 1.7;
+}
+
+.wins-info li {
+  margin-bottom: 9px;
+}
+
+.wins-info a {
+  color: #125da3;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@keyframes goldGlow {
+  from {
+    box-shadow: 0 0 8px rgba(255,193,7,.35);
+  }
+  to {
+    box-shadow: 0 0 24px rgba(255,193,7,.85);
+  }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  45%, 100% { left: 150%; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .main-wins-btn {
+    width: 95%;
+    padding: 17px 12px;
+    font-size: 19px;
+  }
+
+  .wins-menu {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .wins-menu button {
+    width: 100%;
+  }
+
+  .wins-info {
+    padding: 18px;
+  }
+
+  .wins-info h2 {
+    font-size: 20px;
+  }
+}
+</style>
+
+<script>
+function toggleWinsMenu() {
+  const menu = document.getElementById("winsMenu");
+  const arrow = document.querySelector(".btn-arrow");
+
+  const isOpen = menu.style.display === "flex";
+
+  menu.style.display = isOpen ? "none" : "flex";
+  arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+
+  if (isOpen) {
+    document.querySelectorAll(".wins-info").forEach(panel => {
+      panel.style.display = "none";
+    });
+  }
+}
+
+function showWin(id) {
+  document.querySelectorAll(".wins-info").forEach(panel => {
+    panel.style.display = "none";
+  });
+
+  const selected = document.getElementById(id);
+  if (selected) {
+    selected.style.display = "block";
+    selected.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	
 <section class="countdown">
     <h2>🎉 До зимових канікул залишилося</h2>
 
