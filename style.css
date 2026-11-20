@@ -1,7 +1,7 @@
 ﻿
 @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
 header, footer {
-  background-color: linear-gradient(135deg, #155a9c, #55b5e8);
+  background-color: #007FFF;
   padding: 10px;
 }
 
