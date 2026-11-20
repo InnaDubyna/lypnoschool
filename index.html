@@ -367,7 +367,7 @@ function showWin(id) {
 
 
 
-	
+
 <section class="countdown">
     <h2>🎉 До зимових канікул залишилося</h2>
 
@@ -398,44 +398,78 @@ function showWin(id) {
 
 <style>
 .countdown {
+    width: 34%;
+    min-width: 320px;
+    max-width: 520px;
+    box-sizing: border-box;
     background: linear-gradient(135deg, #155a9c, #55b5e8);
     color: white;
     text-align: center;
-    padding: 40px 15px;
+    padding: 25px 15px;
     border-radius: 20px;
     margin: 30px auto;
+    box-shadow: 0 8px 20px rgba(21, 90, 156, 0.25);
 }
 
 .countdown h2 {
-    margin-bottom: 25px;
+    font-size: 21px;
+    margin: 0 0 20px;
 }
 
 .timer {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
 .timer div {
     background: white;
     color: #155a9c;
-    padding: 20px;
+    padding: 12px 8px;
     border-radius: 12px;
-    min-width: 85px;
+    min-width: 55px;
+    flex: 1;
 }
 
 .timer span {
-    font-size: 35px;
+    font-size: 27px;
     font-weight: bold;
 }
 
 .timer p {
-    margin-top: 5px;
+    margin: 5px 0 0;
+    font-size: 13px;
 }
 
 #finish {
-    margin-top: 20px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        width: 92%;
+        min-width: 0;
+        padding: 22px 10px;
+    }
+
+    .countdown h2 {
+        font-size: 18px;
+    }
+
+    .timer {
+        gap: 6px;
+    }
+
+    .timer div {
+        min-width: 48px;
+        padding: 10px 5px;
+    }
+
+    .timer span {
+        font-size: 23px;
+    }
 }
 </style>
 
@@ -472,12 +506,6 @@ function updateTimer() {
 updateTimer();
 setInterval(updateTimer, 1000);
 </script>
-
-
-
-
-
-
 
 
 
